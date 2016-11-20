@@ -1,0 +1,63 @@
+[
+	 {
+		"status" : true,
+		"text1" : "Задание на сегодня",
+		 "date" : "Sat Nov 19 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "tomorrow"
+	},
+	{
+		"status" : true,
+		"text1" : "Задание на сегодня",
+		"date" : "Sun Nov 20 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		"myRand" : "tomorrow"
+	},
+	 {
+		"status" : true,
+		"text1" : "Задание на сегодня",
+		 "date" : "Sun Nov 20 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "tomorrow"
+	},
+	 {
+		"status" : false,
+		"text2" : "Задание на завтра",
+		 "date" : "Tue Nov 22 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "tomorrow"
+	},
+	 {
+		"status" : true,
+		"text3" : "Задание на послезавтра",
+		 "date" :"Wed Nov 23 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "today"
+	},
+	 {
+		"status" : false,
+		"text3" : "Задание на послезавтра",
+		 "date" : "Wed Nov 23 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "today"
+	},
+	 {
+		"status" : true,
+		"text3" : "Задание на послезавтра",
+		 "date" : "Wed Nov 23 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "today"
+	},
+	 {
+		"status" : false,
+		"text4" : "Задание на после после завтра",
+		 "date" :"Thu Nov 24 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "today"
+	},
+	{
+		"status" : true,
+		"text4" : "Задание на после после завтра",
+		"date" : "Thu Nov 24 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		"myRand" : "today"
+	},
+	 {
+		"status" : true,
+		"text4" : "Задание на после после завтра",
+		 "date" : "Thu Nov 24 2016 00:00:00 GMT+0200 (Финляндия (зима))",
+		 "myRand" : "today"
+	}
+]
+

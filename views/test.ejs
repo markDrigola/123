@@ -1,0 +1,47 @@
+<%data.forEach(function(el, i, arr) {%>
+<%=el.text%>
+<%})%>
+
+
+
+
+
+app.get("/todo", function(req,res){
+var requestData = req.query;
+// console.log(db);
+// var tmpArray = [];
+//
+//
+// 	for (var i =0; i< db.length; i++) {
+// 		var el = db[i];
+// 		if (Array.isArray(requestData.date)) {
+// 			for (var m=0; m < requestData.date.length ;m++) {
+// 				if ( new Date(el.date).getDate() ===	(new Date()).getDate() + parseInt(requestData.date[m])) {
+// 					tmpArray.push(el)
+// 				}
+// 			}
+//
+// 		}else if ( new Date(el.date).getDate() ===	(new Date()).getDate() + parseInt(requestData.date)) {
+// 			tmpArray.push(el)
+// 		}
+// 	}
+
+
+
+// db.filter(function (el) {
+// 	return new Date(el.date).getDate() ===	(new Date()).getDate() + parseInt(requestData.date);
+// })
+
+// for (var key in db) {
+//
+//
+// if(db[key].status == true) {
+//
+// }
+res.render("todo", {data: db});
+// }
+
+
+});]
+
+
