@@ -17,12 +17,24 @@ app.get("/todo", function(req,res){
 	var tmpArr = [];
 
 	for( var key in requestData) {
-		for(var i = 1; i < 5; i++) {
-			if(key == "text" + i + "") {
+		for(var i = 1; i < 6; i++) {
+			if(key == "text" + i + "" || key == "select") {
 				if(requestData[key] == "on") {
 					for(var j = 0; j < db.length; j++) {
-						if(db[j][key] !== undefined ) {
-							tmpArr.push(db[j][key]);
+						if(db[j][key] !== undefined || db[j].status !== undefined) {
+							if(key == "select" && requestData[key] == "on") {
+								console.log(db[j].status)
+								if(db[j].status == true) {
+									tmpArr.push(db[j][key]);
+								}
+							} else if(key == "select" && requestData[key] == "off") {
+								//console.log(db[j].status)
+								if(db[j].status == false) {
+									tmpArr.push(db[j][key]);
+								}
+							} else {
+								tmpArr.push(db[j][key]);
+							}
 						}
 					}
 				}
@@ -34,6 +46,6 @@ app.get("/todo", function(req,res){
 
 });
 
-app.listen(3000, function(){
+app.listen(40124, function(){
 	console.log("I am ready on port "+3000);
-})
+});

@@ -7,15 +7,17 @@ $(document).ready(function(){
 	});
 	$("form").find("[name=test]").change( function(event){
 		var elemChecked = $("form").find("[name=test]");
-		
-		if($(this).val() == 'off') {
-			$(this).val('on');
-		} else {
-			$(this).val('off');
+
+		if($(this).attr("id") != 'selectors') {
+			if($(this).val() == 'off') {
+				$(this).val('on');
+			} else {
+				$(this).val('off');
+			}
 		}
 
 		$.ajax({
-			url:"/todo?text1=" + $('.next').val() + "&text2=" + $('.next2').val() + "&text3=" + $('.next3').val() + "&text4=" + $('.next4').val() +"",
+			url:"/todo?text1=" + $('.next').val() + "&text2=" + $('.next2').val() + "&text3=" + $('.next3').val() + "&text4=" + $('.next4').val() + "&select="+ $('#selectors').val() +"",
 			async:true
 		}).done( function(data){
 			$('p').html(data);
@@ -27,7 +29,7 @@ $(document).ready(function(){
 				count++;
 				if(count == 4) {
 					$.ajax({
-						url:"/todo?text1=on&text2=on&text3=on&text4=on",
+						url:"/todo?text1=on&text2=on&text3=on&text4=on&select=on",
 						async:true
 					}).done( function(data){
 						$('p').html(data);
@@ -36,6 +38,17 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	// var elemSelect = $('#selectors');
+    //
+	// elemSelect.change(function () {
+	// 	$.ajax({
+	// 		url:"/todo?text1=" + $('.next').val() + "&text2=" + $('.next2').val() + "&text3=" + $('.next3').val() + "&text4=" + $('.next4').val() + elemSelect.val() + "",
+	// 		async:true
+	// 	}).done( function(data){
+	// 		$('p').html(data);
+	// 	});
+	// });
 
 	$("form").submit( function(event){
 		event.preventDefault();
